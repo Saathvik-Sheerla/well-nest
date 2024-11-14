@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+    <div class="standard-cnt" >
+        <div class="index-container" >
+            <% for(let i=0; i<13; i++){ %>
+                <a class="card-link" href="/test/<%=i+1%>" >
+                    <div class="card" style="width: 16rem; margin: 1rem 0.3rem 0.5rem 0;">
+                        <img src="" class="card-img-top" alt="">
+                            <div class="card-img-overlay">
+                            </div>
+                        <div class="card-body">
+                            <P class="index-level-id">
+                                level 1
+                            </P>
+                            <p class="card-price">
+                                <b id="index-test-id">Test<%= i+1 %></b>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            <%}%>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+    <div class="standard-cnt">
+        <div class="profile-container">
+            <div class="profile-text-data-container">
+                <div class="profile-data-row" ><b>Name</b>: <%= profile.name %></div>
+                <div class="profile-data-row"><b>Age</b>: <%= profile.age %></div>
+                <div class="profile-data-row"><b>Gender</b>: <%= profile.gender %></div>
+                <div class="profile-data-row"><b>email</b>: <%= profile.email %></div>
+                <div class="profile-data-row"><b>phno</b>: <%= profile.phno %></div>
+            </div>
+            <div class="profile-img-container" >
+                <img class="profile-img"
+                    src="<%= profile.img %>" alt=""
+                >
+            </div>
+        </div>
+    </div>
+</body>

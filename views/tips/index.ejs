@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+    <div class="standard-cnt" >
+        <div class="index-container" >
+            <% for(let tip of tips){ %>
+                <a class="card-link" href="#" >
+                    <div class="card" style="width: 17rem; margin: 1rem 0.3rem 0.5rem 0;">
+                        <img src="<%= tip.img %>" class="card-img-top" alt="">
+                            <div class="card-img-overlay">
+                            </div>
+                        <div class="card-body">
+                            <P class="index-level-id" style="text-decoration: none !important; text-align: center; font-size: 1.5rem !important;" >
+                                <%= tip.title %>
+                            </P>
+                        </div>
+                    </div>
+                </a>
+            <%}%>
+        </div>
+    </div>
+</body>

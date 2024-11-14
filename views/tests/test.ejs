@@ -1,0 +1,17 @@
+<div class="fullscreen-container">
+    <% for(let question of test[0]) { %>.
+        <div class="question-container">
+            <p class="question">
+                <%= question.question %>
+            </p>
+            <ul class="options" style="list-style: none;">
+                <% question.options.forEach(option => { %>
+                    <li class="option">
+                        <input type="radio" name="answer" value="<%= option.value %>" id="<%= option.id %>">
+                        <label for="<%= option.id %>"><%= option.text %></label>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    <% } %>
+</div>
