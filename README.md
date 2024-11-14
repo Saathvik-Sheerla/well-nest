@@ -1,7 +1,7 @@
-from root-folder open terminal 
-run: npm i
+from root-folder open terminal \n
+run: npm i \n
 create a .env file in root-folder
 in .env file => PORT=3000    or    PORT=8080    or   any free port in your system
 in .env file => SECRET=captainram
 run: node app.js
-see 'https://localhost:3000/home'
+in browser see 'https://localhost:3000/home'
