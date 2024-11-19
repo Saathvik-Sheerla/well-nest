@@ -17,16 +17,36 @@
     <div class="container-fluid">
 
         <%- body %>
-        <a style="font-size: 2rem; position: fixed; right: 2rem; bottom: 1rem; z-index: 10; cursor: pointer;">
+        <div class="chat-div" >
+            hi there!
+            <input type="text" style=" position: absolute; bottom: 1rem; margin: 1rem 0 0.2rem 0; width: 10rem;" >
+        </div>
+        <button  class="chat-btn" id="chat-btn" >
             <i class="fa-regular fa-comment"></i>
-        </a>
+        </button>
     </div>
 
 
     <!-- footer -->
     <%- include('../includes/footer.ejs') %>
 
-    <script src="/scripts/formValidation.js"></script>
+    <script  >
+        let chatBtn = document.getElementById('chat-btn');
+        let chat = document.querySelector('.chat-div');
+        let isOpen = false;
+
+        chatBtn.addEventListener('click', ()=>{
+            if(isOpen){
+                isOpen = false;
+                chat.style.display = 'none';
+                console.log('closed');
+            } else {
+                isOpen = true;
+                chat.style.display = 'block';
+                console.log('opened');
+            }
+        })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
 </body>

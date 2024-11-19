@@ -61,7 +61,7 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/home', (req, res)=>{
-    res.render('home');
+    res.render('home', {profile});
 });
 
 app.get('/tests', (req, res)=>{
@@ -78,7 +78,19 @@ app.get('/profile', (req, res)=>{
 
 app.get('/test/:id', (req, res)=>{
     res.render('tests/test', {test});
-})
+});
+
+app.get('/personality-inventory', (req, res)=>{
+    res.render('dashboard/personality-inventory');
+});
+
+app.get('/level-1', (req,res)=>{
+    res.render('dashboard/level-1');
+});
+
+app.get('/level-2', (req,res)=>{
+    res.render('dashboard/level-2');
+});
 
 app.get('/login', (req, res)=>{
     res.render('users/login');
